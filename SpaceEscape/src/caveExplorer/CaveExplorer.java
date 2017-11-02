@@ -17,7 +17,7 @@ public class CaveExplorer {
 		
 		inventory = new Inventory();
 		startExploring();
-	}
+	} 
 	
 	
 	private static void startExploring() {

@@ -17,7 +17,7 @@ public class Inventory {
 		map += "___\n";//3 underscores, makes the corner look symmetrical
 		for(CaveRoom[] row : CaveExplorer.caves) {
 			//3 rows of text
-			for(int i = 0; i < 3; i++) {
+			for(int i = 0; i < 3; i++) { 
 				String text = "";
 				for(CaveRoom cr : row) {
 					//if door is open, leave open

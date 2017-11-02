@@ -24,7 +24,7 @@ public class Door {
 
 	public boolean isOpen() {
 		return open;
-	}
+	} 
 
 	public void setOpen(boolean open) {
 		this.open = open;

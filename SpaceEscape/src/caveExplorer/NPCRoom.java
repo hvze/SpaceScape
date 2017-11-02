@@ -20,7 +20,7 @@ public class NPCRoom extends CaveRoom {
 	public void enterNPC(NPC m) {
 		presentNPC = m;
 	}
-	
+	 
 	public void leaveNPC() {
 		presentNPC = null;
 	}

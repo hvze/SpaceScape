@@ -16,7 +16,7 @@ public class NPC {
 	//fields relating to character
 	private boolean active;
 	private String activeDescription;
-	private String inactiveDescription;
+	private String inactiveDescription; 
 	
 	
 	//default constructor
