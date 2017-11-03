@@ -1,5 +1,7 @@
 package caveExplorer;
 
+import fahadAndDavid.FahadRoom;
+
 public class CaveRoom {
 	
 	private String description;//tells what the room looks like
@@ -176,6 +178,9 @@ public class CaveRoom {
 			}
 		}
 		//3. Replace default rooms with custom rooms
+		CaveRoom custom = new FahadRoom("Dio's Room");
+		CaveExplorer.caves[1][3] = custom;
+		
 		//--- WE WILL DO LATER
 		CaveExplorer.npcs = new NPC[1];
 		CaveExplorer.npcs[0] = new NPC();
