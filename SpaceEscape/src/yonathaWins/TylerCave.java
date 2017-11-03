@@ -10,7 +10,7 @@ public class TylerCave extends CaveRoom {
 		boolean isJeff = false;
 	}
 
-	public String validKeys() {
+	public String validKeys() { 
 		return "wdsal";
 	}
 	
