@@ -1,5 +1,5 @@
 package rickyAndGarrett;
 
-public class b {
+public class RickyFrontEnd {
 
 }
