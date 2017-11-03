@@ -8,7 +8,7 @@ public class YonathanWinsAgain extends CaveRoom {
 		super(description);
 		
 	}
-     // loli love 
+     // loli l ove 
 	public void preformAction() {
 	
 	}
