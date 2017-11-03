@@ -4,7 +4,7 @@ import caveExplorer.CaveExplorer;
 import caveExplorer.CaveRoom;
 
 public class TylerCave extends CaveRoom {
-
+ 
 	public TylerCave(String description) {
 		super(description);
 		boolean isJeff = false;
