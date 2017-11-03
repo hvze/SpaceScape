@@ -1,5 +1,5 @@
 package fahadAndDavid;
 
-public class a {
+public class FahadFrontEnd {
 
 }
