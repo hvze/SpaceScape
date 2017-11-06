@@ -1,5 +1,7 @@
 package caveExplorer;
 
+import rickyAndGarrett.GarrettRoom;
+
 public class CaveRoom {
 	
 	private String description;//tells what the room looks like
@@ -165,7 +167,7 @@ public class CaveRoom {
 	public static void setUpCaves() {
 		//ALL OF THIS CODE CAN BE CHANGED
 		//1. Decide how big your caves should be
-		CaveExplorer.caves = new NPCRoom[5][5];
+		CaveExplorer.caves = new CaveRoom[5][5];
 		//2. Populate with caves and a default description: hint: when starting, use coordinates (helps debugging)	
 		for(int row = 0; row < CaveExplorer.caves.length; row++) {
 			//PLEASE PAY ATTENTION TO THE DIFFERENCE:
@@ -177,6 +179,10 @@ public class CaveRoom {
 		}
 		//3. Replace default rooms with custom rooms
 		//--- WE WILL DO LATER
+		
+		CaveRoom customRoom = new GarrettRoom("Trivia Room");
+		CaveExplorer.caves[0][3] = customRoom;
+		
 		CaveExplorer.npcs = new NPC[1];
 		CaveExplorer.npcs[0] = new NPC();
 		CaveExplorer.npcs[0].setPosition(1, 1);
@@ -187,6 +193,9 @@ public class CaveRoom {
 		//5. Set up doors
 		CaveRoom[][] c = CaveExplorer.caves;
 		c[0][1].setConnection(SOUTH, c[1][1], new Door());
+		c[0][1].setConnection(EAST, c[0][2], new Door());
+		c[0][2].setConnection(EAST, c[0][3], new Door());
+		
 		
 	}
 
