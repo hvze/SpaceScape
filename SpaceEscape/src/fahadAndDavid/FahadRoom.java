@@ -33,7 +33,7 @@ public class FahadRoom extends CaveRoom {
 		CaveExplorer.print("You thought it was a random NPC, but it was I, Dio.");
 		String s = CaveExplorer.in.nextLine();
 		while(!s.equalsIgnoreCase("bye")) {
-			CaveExplorer.print("...");
+			CaveExplorer.print("Muda Muda");
 			s = CaveExplorer.in.nextLine();
 		}
 		CaveExplorer.print("Well, that was fun. Later!");
