@@ -10,7 +10,6 @@ public class RickyRoom extends NPCRoom {
 
 	public RickyRoom(String description) {
 		super(description);
-		presentNPC = null;
 	}
 	
 	public void performAction(int direction) {

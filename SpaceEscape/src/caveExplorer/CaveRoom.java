@@ -1,5 +1,7 @@
 package caveExplorer;
 
+import rickyAndGarrett.RickyRoom;
+
 public class CaveRoom {
 	
 	private String description;//tells what the room looks like
@@ -177,6 +179,11 @@ public class CaveRoom {
 		}
 		//3. Replace default rooms with custom rooms
 		//--- WE WILL DO LATER
+		
+		CaveRoom customRoomRicky = new RickyRoom(" Break Room");
+		CaveExplorer.caves[2][3] = customRoomRicky;
+		
+		
 		CaveExplorer.npcs = new NPC[1];
 		CaveExplorer.npcs[0] = new NPC();
 		CaveExplorer.npcs[0].setPosition(1, 1);
@@ -215,7 +222,8 @@ public class CaveRoom {
 	public Door getDoor(int direction) {
 		if(direction >= 0 && direction < doors.length) {
 			return doors[direction];
-		}else {
+		}
+		else {
 			return null;
 		}
 	}
