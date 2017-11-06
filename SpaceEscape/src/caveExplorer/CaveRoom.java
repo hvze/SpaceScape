@@ -192,8 +192,6 @@ public class CaveRoom {
 		CaveRoom customRoomRicky = new RickyRoom(" Break Room");
 		CaveExplorer.caves[0][4] = customRoomRicky;
 		
-		CaveRoom customRoom = new GarrettRoom("Trivia Room");
-		CaveExplorer.caves[0][3] = customRoom;
 		
 		CaveExplorer.npcs = new NPC[1];
 		CaveExplorer.npcs[0] = new NPC();
