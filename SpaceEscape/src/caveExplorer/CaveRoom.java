@@ -167,7 +167,7 @@ public class CaveRoom {
 	public static void setUpCaves() {
 		//ALL OF THIS CODE CAN BE CHANGED
 		//1. Decide how big your caves should be
-		CaveExplorer.caves = new NPCRoom[5][5];
+		CaveExplorer.caves = new CaveRoomd[5][5];
 		//2. Populate with caves and a default description: hint: when starting, use coordinates (helps debugging)	
 		for(int row = 0; row < CaveExplorer.caves.length; row++) {
 			//PLEASE PAY ATTENTION TO THE DIFFERENCE:
@@ -178,8 +178,8 @@ public class CaveRoom {
 			}
 		}
 		//3. Replace default rooms with custom rooms
-		CaveRoom customRoom = new FahadRoom("Room");
-		CaveExplorer.caves[2][3] = customRoom;
+		CaveRoom customRo = new FahadRoom("Room");
+		CaveExplorer.caves[2][3] = customRo;
 		//--- WE WILL DO LATER
 		CaveExplorer.npcs = new NPC[1];
 		CaveExplorer.npcs[0] = new NPC();
