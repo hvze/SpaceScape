@@ -178,8 +178,8 @@ public class CaveRoom {
 			}
 		}
 		//3. Replace default rooms with custom rooms
-		CaveRoom custom = new FahadRoom("Dio's Room");
-		CaveExplorer.caves[1][3] = custom;
+		CaveRoom cust = new FahadRoom("Dio's Room");
+		CaveExplorer.caves[1][1] = cust;
 		
 		//--- WE WILL DO LATER
 		CaveExplorer.npcs = new NPC[1];
