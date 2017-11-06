@@ -1,6 +1,7 @@
 package caveExplorer;
 
 import fahadAndDavid.FahadRoom;
+import rickyAndGarrett.GarrettRoom;
 
 public class CaveRoom {
 	
@@ -22,7 +23,7 @@ public class CaveRoom {
 		this.description = description;
 		setDefaultContents(" ");
 		contents = defaultContents;
-		//difference bet ween defaultContents and contents is "contents" becomes an 'X' when you are
+		//difference between defaultContents and contents is "contents" becomes an 'X' when you are
 		//inside this room, when you leave, it goes back to defaultContents
 		
 		//note: by default, arrays will populate with 'null' meaning there are no connections
@@ -155,10 +156,10 @@ public class CaveRoom {
 	 * Override to give response to keys other than wasd
 	 * @param direction
 	 */
+	
 	public void performAction(int direction) {
 		System.out.println("That key does nothing.");
 	}
-
 
 	/**
 	 * This will be where your group sets up all the caves
@@ -178,9 +179,13 @@ public class CaveRoom {
 			}
 		}
 		//3. Replace default rooms with custom rooms
-		CaveRoom customRo = new FahadRoom("Dio's Room");
-		CaveExplorer.caves[0][2] = customRo;
+		CaveRoom customFahad = new FahadRoom("Dio's Room");
+		CaveExplorer.caves[0][2] = customFahad;
 		//--- WE WILL DO LATER
+		
+		CaveRoom customGar = new GarrettRoom("Trivia Room");
+		CaveExplorer.caves[0][3] = customGar;
+		
 		CaveExplorer.npcs = new NPC[1];
 		CaveExplorer.npcs[0] = new NPC();
 		CaveExplorer.npcs[0].setPosition(1, 1);
@@ -195,6 +200,7 @@ public class CaveRoom {
 		CaveRoom[][] c = CaveExplorer.caves;
 		c[0][1].setConnection(SOUTH, c[1][1], new Door());
 		c[0][1].setConnection(EAST, c[0][2], new Door());
+		c[0][2].setConnection(EAST, c[0][3], new Door());
 		
 	}
 
