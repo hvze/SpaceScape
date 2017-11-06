@@ -2,15 +2,12 @@ package fahadAndDavid;
 
 import caveExplorer.CaveExplorer;
 import caveExplorer.CaveRoom;
-import caveExplorer.NPC;
 
 public class FahadRoom extends CaveRoom {
 	
-	private NPC presentNPC;
 	
 	public FahadRoom(String description) {
 		super(description);
-		presentNPC = new NPC();
 	}
 	
 	//underneath replace
