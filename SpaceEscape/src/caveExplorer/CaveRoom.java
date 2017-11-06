@@ -155,10 +155,10 @@ public class CaveRoom {
 	 * Override to give response to keys other than wasd
 	 * @param direction
 	 */
+	
 	public void performAction(int direction) {
 		System.out.println("That key does nothing.");
 	}
-
 
 	/**
 	 * This will be where your group sets up all the caves
