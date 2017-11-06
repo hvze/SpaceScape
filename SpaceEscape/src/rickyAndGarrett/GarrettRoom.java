@@ -12,9 +12,13 @@ public class GarrettRoom extends CaveRoom {
 		super(description);
 	}
 	
+	public String validKeys() {
+		return "wdsae";
+	}
+	
 	public void performAction(int direction) {
-		if(direction == 4) {
-				interact();
+		if(direction == 4) { 
+			interact();
 		}else {
 			CaveExplorer.print("That key does nothing.");
 		}

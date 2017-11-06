@@ -2,6 +2,7 @@ package caveExplorer;
 
 import fahadAndDavid.FahadRoom;
 import rickyAndGarrett.GarrettRoom;
+import rickyAndGarrett.RickyRoom;
 
 public class CaveRoom {
 	
@@ -183,15 +184,18 @@ public class CaveRoom {
 		CaveExplorer.caves[0][2] = customFahad;
 		//--- WE WILL DO LATER
 		
+
 		CaveRoom customGar = new GarrettRoom("Trivia Room");
 		CaveExplorer.caves[0][3] = customGar;
+		CaveRoom customRoomRicky = new RickyRoom(" Break Room");
+		CaveExplorer.caves[0][4] = customRoomRicky;
+		
+		CaveRoom customRoom = new GarrettRoom("Trivia Room");
+		CaveExplorer.caves[0][3] = customRoom;
 		
 		CaveExplorer.npcs = new NPC[1];
 		CaveExplorer.npcs[0] = new NPC();
 		CaveExplorer.npcs[0].setPosition(1, 1);
-		//ad each person room like this
-		CaveRoom customRoom = new NPCRoom("Room");
-		CaveExplorer.caves[2][3] = customRoom;
 		
 		//4. Set your starting room:
 		CaveExplorer.currentRoom = CaveExplorer.caves[0][1];
@@ -200,6 +204,10 @@ public class CaveRoom {
 		CaveRoom[][] c = CaveExplorer.caves;
 		c[0][1].setConnection(SOUTH, c[1][1], new Door());
 		c[0][1].setConnection(EAST, c[0][2], new Door());
+		c[0][2].setConnection(EAST, c[0][3], new Door());
+		c[0][1].setConnection(WEST, c[0][0], new Door());
+		c[0][1].setConnection(EAST, c[0][2], new Door());
+		c[0][3].setConnection(EAST, c[0][4], new Door());
 		c[0][2].setConnection(EAST, c[0][3], new Door());
 		
 	}
@@ -229,7 +237,8 @@ public class CaveRoom {
 	public Door getDoor(int direction) {
 		if(direction >= 0 && direction < doors.length) {
 			return doors[direction];
-		}else {
+		}
+		else {
 			return null;
 		}
 	}
