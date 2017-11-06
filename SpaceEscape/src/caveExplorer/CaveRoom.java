@@ -197,7 +197,7 @@ public class CaveRoom {
 		
 	}
 
-
+ 
 	public String getDescription() {
 		return description + "\n" + directions;
 	}
