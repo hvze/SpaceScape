@@ -34,7 +34,7 @@ public class RickyRoom extends NPCRoom {
 			CaveExplorer.print("I am waiting for an answer, I know I'm an NPC and all I do is talk, but I'm getting bored.('psst! Type 'leave' in order to leave this room.')");
 			s = CaveExplorer.in.nextLine();
 		}
-		CaveExplorer.print("Well, It was nice meeting you. Good Luck on your jorney and safe travels.");
+		CaveExplorer.print("Well, It was nice meeting you. Good Luck on your journey and safe travels.");
 	}
 	
 }
