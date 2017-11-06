@@ -167,7 +167,7 @@ public class CaveRoom {
 	public static void setUpCaves() {
 		//ALL OF THIS CODE CAN BE CHANGED
 		//1. Decide how big your caves should be
-		CaveExplorer.caves = new CaveRoomd[5][5];
+		CaveExplorer.caves = new CaveRoom[5][5];
 		//2. Populate with caves and a default description: hint: when starting, use coordinates (helps debugging)	
 		for(int row = 0; row < CaveExplorer.caves.length; row++) {
 			//PLEASE PAY ATTENTION TO THE DIFFERENCE:
