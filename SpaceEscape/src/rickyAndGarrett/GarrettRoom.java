@@ -1,27 +1,24 @@
 package rickyAndGarrett;
 
 import caveExplorer.CaveExplorer;
-import caveExplorer.NPC;
-import caveExplorer.NPCRoom;
+import caveExplorer.CaveRoom;
 
-public class GarrettRoom extends NPCRoom {
+public class GarrettRoom extends CaveRoom {
 	
-	private NPC presentNPC;
 	private String[] trivia = {"Taco Bell was created in 1962 - nearly 55 years ago!","In Japan, letting a sumo wrestler make your baby cry is considered good luck.",
 			"Between 1900 and 1920, Tug of War was an Olympic event.","The Code of Hammurabi decreed that bartenders who watered down beer would be executed."};
 
 	public GarrettRoom(String description) {
 		super(description);
-		presentNPC = null;
+	}
+	
+	public String validKeys() {
+		return "wdsae";
 	}
 	
 	public void performAction(int direction) {
-		if(direction == 4) {
-			if(containsNPC() && presentNPC.isActive()) {
-				interact();
-			}else {
-				CaveExplorer.print("There is nothing to interact with");
-			}
+		if(direction == 4) { 
+			interact();
 		}else {
 			CaveExplorer.print("That key does nothing.");
 		}

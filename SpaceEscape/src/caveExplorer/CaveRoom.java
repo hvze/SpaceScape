@@ -1,6 +1,10 @@
 package caveExplorer;
 
+<<<<<<< HEAD
 import rickyAndGarrett.RickyRoom;
+=======
+import rickyAndGarrett.GarrettRoom;
+>>>>>>> branch 'rickyGarrettBranch' of https://github.com/Shadowblue45/SpaceScape.git
 
 public class CaveRoom {
 	
@@ -180,9 +184,14 @@ public class CaveRoom {
 		//3. Replace default rooms with custom rooms
 		//--- WE WILL DO LATER
 		
+<<<<<<< HEAD
 		CaveRoom customRoomRicky = new RickyRoom(" Break Room");
 		CaveExplorer.caves[0][4] = customRoomRicky;
 		
+=======
+		CaveRoom customRoom = new GarrettRoom("Trivia Room");
+		CaveExplorer.caves[0][3] = customRoom;
+>>>>>>> branch 'rickyGarrettBranch' of https://github.com/Shadowblue45/SpaceScape.git
 		
 		CaveExplorer.npcs = new NPC[1];
 		CaveExplorer.npcs[0] = new NPC();
@@ -194,10 +203,16 @@ public class CaveRoom {
 		//5. Set up doors
 		CaveRoom[][] c = CaveExplorer.caves;
 		c[0][1].setConnection(SOUTH, c[1][1], new Door());
+<<<<<<< HEAD
 		c[0][1].setConnection(WEST, c[0][0], new Door());
 		c[0][1].setConnection(EAST, c[0][2], new Door());
 		c[0][2].setConnection(EAST, c[0][3], new Door());
 		c[0][3].setConnection(EAST, c[0][4], new Door());
+=======
+		c[0][1].setConnection(EAST, c[0][2], new Door());
+		c[0][2].setConnection(EAST, c[0][3], new Door());
+		
+>>>>>>> branch 'rickyGarrettBranch' of https://github.com/Shadowblue45/SpaceScape.git
 		
 	}
 
