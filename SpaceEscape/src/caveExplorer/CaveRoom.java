@@ -47,7 +47,7 @@ public class CaveRoom {
 		for(int i = 0; i < doors.length; i++) {
 			if(doors[i] != null) {
 				doorFound = true;
-				directions += "\n   There is a  " + doors[i].getDescription() + " to " + 
+				directions += "\n   There is a " + doors[i].getDescription() + " to " + 
 				toDirection(i) + ". " + doors[i].getDetails();
 			}
 		}
@@ -178,9 +178,8 @@ public class CaveRoom {
 			}
 		}
 		//3. Replace default rooms with custom rooms
-		CaveRoom cust = new FahadRoom("Dio's Room");
-		CaveExplorer.caves[1][1] = cust;
-		
+		CaveRoom customRoom = new FahadRoom("Room");
+		CaveExplorer.caves[2][3] = customRoom;
 		//--- WE WILL DO LATER
 		CaveExplorer.npcs = new NPC[1];
 		CaveExplorer.npcs[0] = new NPC();
@@ -192,6 +191,7 @@ public class CaveRoom {
 		//5. Set up doors
 		CaveRoom[][] c = CaveExplorer.caves;
 		c[0][1].setConnection(SOUTH, c[1][1], new Door());
+		c[0][1].setConnection(EAST, c[0][2], new Door());
 		
 	}
 
