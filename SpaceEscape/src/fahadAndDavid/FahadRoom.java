@@ -4,7 +4,7 @@ import caveExplorer.CaveExplorer;
 import caveExplorer.CaveRoom;
 
 public class FahadRoom extends CaveRoom {
-
+	
 	public FahadRoom(String description) {
 		super(description);
 	}
