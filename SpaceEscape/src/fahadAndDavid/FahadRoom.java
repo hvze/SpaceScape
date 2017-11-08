@@ -38,5 +38,9 @@ public class FahadRoom extends CaveRoom {
 		}
 		CaveExplorer.print("Well, that was fun. Later!");
 	}
+	
+	public String getContents() {
+		return "D";
+	}
 
 }
