@@ -44,7 +44,7 @@ public class NPCRoom extends CaveRoom {
 	
 	public void printAllowedEntry() {
 		CaveExplorer.print("You can only enter 'w', 'a', 's', or 'd' to move or"
-				+ "you can type 'e' to interact.");
+				+ " you can type 'e' to interact.");
 	}
 	
 	public void performAction(int direction) {

@@ -16,7 +16,7 @@ public class YonathanWinsAgain extends CaveRoom {
 		System.out.println("That key does nothing.");
 	}
 	public void printAllowedEntry() {
-		System.out.println("You can only enter 'w', 'a', 's', or 'd'.");
+		System.out.println("jet fuel can melt steal beans");
 	}
 	public String validKeys() {
 		return "wdsa";
