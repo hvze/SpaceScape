@@ -29,7 +29,7 @@ public class DavidRoom extends CaveRoom {
 	public void interact() {
 		CaveExplorer.print("You must answer the problem to pass! What is 1+1");
 		String s = CaveExplorer.in.nextLine();
-		while(!s.equalsIgnoreCase("2") || !s.equalsIgnoreCase("two")) {
+		while(!s.equalsIgnoreCase("2")) {
 			CaveExplorer.print("That's not the answer");
 			s = CaveExplorer.in.nextLine();
 		}
