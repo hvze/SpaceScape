@@ -5,6 +5,7 @@ import fahadAndDavid.FahadRoom;
 import rickyAndGarrett.GarrettRoom;
 import rickyAndGarrett.RickyRoom;
 import yonathaWins.TylerCave;
+import yonathaWins.YonathanWinsAgain;//github.com/Shadowblue45/SpaceScape.git
 
 public class CaveRoom {
 	
@@ -204,6 +205,8 @@ public class CaveRoom {
 		//ad each person room like this
 		CaveRoom customTyler = new TylerCave("Room");
 		CaveExplorer.caves[1][0] = customTyler;
+		CaveRoom customYonathan = new YonathanWinsAgain("Room");
+		CaveExplorer.caves[0][0] = customYonathan;
 		
 		//4. Set your starting room:
 		CaveExplorer.currentRoom = CaveExplorer.caves[0][1];

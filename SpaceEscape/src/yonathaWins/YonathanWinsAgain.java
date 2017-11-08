@@ -8,7 +8,7 @@ public class YonathanWinsAgain extends CaveRoom {
 		super(description);
 		
 	}
-     // loli l ove 
+
 	public void preformAction() {
 	
 	}
@@ -16,7 +16,7 @@ public class YonathanWinsAgain extends CaveRoom {
 		System.out.println("That key does nothing.");
 	}
 	public void printAllowedEntry() {
-		System.out.println("jet fuel can melt steal beans");
+		System.out.println("hello");
 	}
 	public String validKeys() {
 		return "wdsa";
