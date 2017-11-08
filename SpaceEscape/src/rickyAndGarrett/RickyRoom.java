@@ -18,7 +18,7 @@ public class RickyRoom extends NPCRoom {
 				interact();
 			}
 			else {
-				CaveExplorer.print("There's no one here who is active to talk to you...");
+				CaveExplorer.print("There's no one here who is active to talk to you... You're gonna have to wait until the NPC comes back from lunch");
 			}
 		}
 		else {

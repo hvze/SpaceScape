@@ -16,6 +16,10 @@ public class GarrettRoom extends CaveRoom {
 		return "wdsae";
 	}
 	
+	public void printAllowedEntry() {
+		System.out.println("You can only enter 'w', 'a', 's', 'd', or 'e'.");
+	}
+	
 	public void performAction(int direction) {
 		if(direction == 4) { 
 			interact();
