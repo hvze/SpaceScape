@@ -1,6 +1,7 @@
 package caveExplorer;
 
 import yonathaWins.TylerCave;
+import yonathaWins.YonathanWinsAgain;
 
 public class CaveRoom {
 	
@@ -185,14 +186,19 @@ public class CaveRoom {
 		//ad each person room like this
 		CaveRoom customRoom = new TylerCave("Room");
 		CaveExplorer.caves[1][0] = customRoom;
+		CaveRoom yoanthanRoom = new YonathanWinsAgain("Room");
+		CaveExplorer.caves[0][0] = yoanthanRoom;
 		
 		//4. Set your starting room:
 		CaveExplorer.currentRoom = CaveExplorer.caves[0][1];
 		CaveExplorer.currentRoom.enter();
 		//5. Set up doors
 		CaveRoom[][] c = CaveExplorer.caves;
+		Door locked = new Door();
+		locked.setOpen(false);
+		locked.setLocked(true);
 		c[0][1].setConnection(SOUTH, c[1][1], new Door());
-		c[0][0].setConnection(SOUTH, c[1][0], new Door());
+		c[0][0].setConnection(SOUTH, c[1][0], locked);
 		c[0][1].setConnection(WEST, c[0][0], new Door());
 		
 	}
