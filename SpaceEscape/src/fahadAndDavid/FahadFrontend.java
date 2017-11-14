@@ -9,6 +9,11 @@ public class FahadFrontend implements DavidSupport{
 		demo.play();
 	}
 	
+	private void play() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	public FahadFrontend() {
 		backend = new DavidBackend(this);
 	}
