@@ -5,3 +5,4 @@ public interface RickySupport {
 	void doSomething();
 
 }
+//
