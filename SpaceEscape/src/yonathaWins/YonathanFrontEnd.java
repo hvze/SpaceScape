@@ -1,11 +1,16 @@
 package yonathaWins;
 
-public class YonathanFrontEnd implements TylerSupport {
+import caveExplorer.CaveRoom;
 
+public class YonathanFrontEnd implements TylerSupport {
+	//make 2d array populate with tylerfiller
+	//randomly populate with goalfiller
+	//before a square is populated, check if it's already populated
+	//randomly check when a thing is populate whether or not it's a starter and if it's a starter than make an end goal randomly around the map
 	
+	public static CaveRoom[][] flowRoom;
 	private YonathanSupport frontend;
 	private int linesComplete;
-	
 	public YonathanFrontEnd() {
 		frontend = new TylerBackend(this);
 		linesComplete = 0;
@@ -18,8 +23,11 @@ public class YonathanFrontEnd implements TylerSupport {
 	}
 
 	private void play() {
+		while(TylerBackend.isPlaying) {
+				
+			
 		
+		}
 		
 	}
-
 }
