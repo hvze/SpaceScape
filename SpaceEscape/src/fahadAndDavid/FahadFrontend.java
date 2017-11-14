@@ -29,6 +29,16 @@ public class FahadFrontend implements DavidSupport{
 		
 	}
 
+	private void displayScore() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void displayBoard() {
+		// TODO Auto-generated method stub
+		
+	}
+
 	public FahadFrontend() {
 		backend = new DavidBackend(this);
 	}
