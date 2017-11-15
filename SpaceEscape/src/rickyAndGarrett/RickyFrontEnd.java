@@ -24,18 +24,22 @@ public class RickyFrontEnd implements GarrettSupport{
 	}
 
 	private void printGameOverMessage(boolean victorious) {
-		
+		if(victorious) {
+			System.out.println("You is win!");
+		}else {
+			System.out.println("You is lose!");
+		}
 	}
 
 	public void autoReveal() {
 		
 	}
 
-	public  void respondToInput(String input) {
+	public void respondToInput(String input) {
 		
 	}
 
-	public  void displayBoard() {
+	public void displayBoard() {
 		
 	}
 
@@ -43,4 +47,3 @@ public class RickyFrontEnd implements GarrettSupport{
 		 backend = new GarrettBackEnd(this);
 	}
 }
-//
