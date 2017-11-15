@@ -45,5 +45,6 @@ public class RickyFrontEnd implements GarrettSupport{
 
 	public RickyFrontEnd(){
 		 backend = new GarrettBackEnd(this);
+		 createPlots();
 	}
 }

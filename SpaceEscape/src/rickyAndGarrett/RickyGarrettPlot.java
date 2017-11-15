@@ -2,7 +2,7 @@ package rickyAndGarrett;
 
 public class RickyGarrettPlot {
 
-	public RickyGarrettPlot() {
+	public RickyGarrettPlot(int row, int col) {
 		// TODO Auto-generated constructor stub
 	}
 

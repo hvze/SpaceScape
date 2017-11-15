@@ -2,6 +2,8 @@ package rickyAndGarrett;
 
 import java.util.Scanner;
 
+import caveExplorer.BenNocklesPlot;
+
 public class GarrettBackEnd implements RickySupport{
 	
 	private GarrettSupport frontend;
@@ -16,8 +18,26 @@ public class GarrettBackEnd implements RickySupport{
 		 plots = new RickyGarrettPlot[6][6];
 		 numberOfBombs = 5;
 		 isPlaying = false;
+		 createBoard();
 	}
 	
+	public void createBoard() {
+		for(int row = 0; row < plots.length; row++){
+			for(int col = 0; col < plots[row].length; col++){
+				plots[row][col] = new RickyGarrettPlot(row, col);
+			}
+		}
+		randomizeBombs();
+	}
+
+	public void randomizeBombs() {
+		int count = 0;
+		while(count < numberOfBombs){
+			int minesweeperRow = (int)(Math.random() * plots.length);
+			int minesweeperCol = (int)(Math.random() * plots[minesweeperRow].length);
+			}
+		}		
+
 	public RickyGarrettPlot[][] getPlots() {
 		return plots;
 	}
