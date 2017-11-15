@@ -6,6 +6,12 @@ public class RickyGarrettSquare {
 	private int numberOfBombsCloseby;
 	private boolean isBomb;
 	
+	public RickyGarrettSquare() {
+		revealed = false;
+		numberOfBombsCloseby = 0;
+		isBomb = false;
+	}
+	
 	public boolean isRevealed() {
 		return revealed;
 	}
@@ -29,11 +35,4 @@ public class RickyGarrettSquare {
 	public void setBomb(boolean isBomb) {
 		this.isBomb = isBomb;
 	}
-
-	public RickyGarrettSquare() {
-		revealed = false;
-		numberOfBombsCloseby = 0;
-		isBomb = false;
-	}
-
 }
