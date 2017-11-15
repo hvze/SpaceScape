@@ -9,7 +9,7 @@ public class YonathanFrontEnd implements TylerSupport {
 	//randomly check when a thing is populate whether or not it's a starter and if it's a starter than make an end goal randomly around the map
 	private String identifier;
 	
-	//match order to tylers indexs in setorientation
+	//match order to tylers indexs in setorientation 
 	public String orientation[]= {"___\n|"+identifier+" \n|  ","___\n "+identifier
 			};
 	public static CaveRoom[][] flowRoom;
