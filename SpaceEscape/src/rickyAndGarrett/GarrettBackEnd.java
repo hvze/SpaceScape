@@ -6,10 +6,6 @@ public class GarrettBackEnd implements RickySupport{
 	
 	private GarrettSupport frontend;
 	private RickyGarrettPlot[][] plots;
-	
-	public RickyGarrettPlot[][] getPlots() {
-		return plots;
-	}
 
 	private static int numberOfBombs;
 	private boolean isPlaying;
@@ -20,6 +16,10 @@ public class GarrettBackEnd implements RickySupport{
 		 plots = new RickyGarrettPlot[6][6];
 		 numberOfBombs = 5;
 		 isPlaying = false;
+	}
+	
+	public RickyGarrettPlot[][] getPlots() {
+		return plots;
 	}
 
 	@Override
