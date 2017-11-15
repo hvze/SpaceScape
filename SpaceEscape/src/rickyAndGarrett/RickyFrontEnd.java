@@ -6,11 +6,41 @@ public class RickyFrontEnd implements GarrettSupport{
 	
 	public static final void main(String[] args) {
 		RickyFrontEnd demo = new RickyFrontEnd();
+		demo.start();
+	}
+
+	public void start() {
+		System.out.println("Press m for the menu.");
+	}
+	
+	public void play() {
+		  while(backend.stillPlaying()){
+		        displayBoard();
+		        String input = backend.getValidUserInput();
+		        respondToInput(input);
+		        autoReveal();
+		  }
+		        printGameOverMessage(backend.victorious());
+	}
+
+	private void printGameOverMessage(boolean victorious) {
+		
+	}
+
+	public void autoReveal() {
+		
+	}
+
+	public  void respondToInput(String input) {
+		
+	}
+
+	public  void displayBoard() {
+		
 	}
 
 	public RickyFrontEnd(){
 		 backend = new GarrettBackEnd(this);
-		 backend.doSomething();
 	}
 }
 //

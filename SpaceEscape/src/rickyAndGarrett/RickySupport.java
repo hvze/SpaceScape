@@ -2,7 +2,12 @@ package rickyAndGarrett;
 
 public interface RickySupport {
 
-	void doSomething();
+	boolean stillPlaying();
+
+	String getValidUserInput();
+
+	boolean victorious();
+
 
 }
 //
