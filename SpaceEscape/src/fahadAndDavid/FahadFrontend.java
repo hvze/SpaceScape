@@ -21,10 +21,7 @@ public class FahadFrontend implements DavidSupport{
 	        respondToInput(input);
 
 	        backend.changeValues();
-
-	        analyzeBoard();//this frontend method might be where the frontend partner 
-	            //programs everything that would earn most credit for 2D arrays
-
+	        
 	        updateBoard();
 	    }
 	        printGameOverMessage(backend.victorious());
@@ -36,11 +33,6 @@ public class FahadFrontend implements DavidSupport{
 	}
 
 	public void respondToInput(String input) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	public void analyzeBoard() {
 		// TODO Auto-generated method stub
 		
 	}
@@ -62,13 +54,23 @@ public class FahadFrontend implements DavidSupport{
 
 	@Override
 	public void setLights(int row, int col) {
-		if(backend.validInput()) {
 			GameBoard[row][col] = toggleContent(row,col);
-		}
+			if(row > 0 && row+1 < GameBoard.length) {
+				GameBoard[row-1][col] = toggleContent(row-1,col);
+				GameBoard[row+1][col] = toggleContent(row+1,col);
+			}
+			if(col > 0 && col+1 < GameBoard[row].length) {
+				GameBoard[row][col-1] = toggleContent(row,col-1);
+				GameBoard[row][col+1] = toggleContent(row,col+1);
+			}
 	}
 
-	private Object toggleContent(int row, int col) {
-		// TODO Auto-generated method stub
-		return null;
+	private void toggleContent(int row, int col) {
+		if(GameBoard[row][col] == "[]") {
+			GameBoard[row][col] = "*";
+		}
+		if(GameBoard[row][col] == "*") {
+			GameBoard[row][col] = "[]";
+		}
 	}
 }
