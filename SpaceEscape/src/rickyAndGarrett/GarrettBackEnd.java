@@ -70,6 +70,15 @@ public class GarrettBackEnd implements RickySupport{
 			}
 		}
 	}
+	
+	public void calculateNumberOfBombs(RickyGarrettSquare square) {
+		int row = square.getRow();
+		int col = square.getCol();
+		int count = 0;
+		if(!square.isBomb()) {
+			
+		}
+	}
 
 	@Override
 	public boolean victorious() {

@@ -37,10 +37,12 @@ public class RickyFrontEnd implements GarrettSupport{
 	}
 
 	public void respondToInput(String input) {
-		
+		int row = Integer.parseInt(input.substring(0, 1));
+		int col = Integer.parseInt(input.substring(2, 3));
 	}
 
 	public void displayBoard(RickyGarrettSquare[][] squares){
+		String columns = "  0123456789";
 		for(int row = 0; row < squares.length; row++) {
 			System.out.print(row + " ");
 			for(int col = 0; col < squares[row].length;col++) {
@@ -59,7 +61,7 @@ public class RickyFrontEnd implements GarrettSupport{
 			}
 			System.out.println(" " + row);
 		}
-		System.out.println("  12345");
+		System.out.println(columns.substring(0, squares[0].length+2));
 	}
 
 	public RickyFrontEnd(){
