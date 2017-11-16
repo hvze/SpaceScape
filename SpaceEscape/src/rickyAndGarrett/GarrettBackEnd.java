@@ -2,12 +2,10 @@ package rickyAndGarrett;
 
 import java.util.Scanner;
 
-import caveExplorer.BenNocklesPlot;
-
 public class GarrettBackEnd implements RickySupport{
 	
 	private GarrettSupport frontend;
-	private RickyGarrettPlot[][] plots;
+	private RickyGarrettSquare[][] squares;
 
 	private static int numberOfBombs;
 	private boolean isPlaying;
@@ -15,16 +13,16 @@ public class GarrettBackEnd implements RickySupport{
 	
 	public GarrettBackEnd(GarrettSupport frontend){
 		 this.frontend = frontend;
-		 plots = new RickyGarrettPlot[6][6];
+		 squares = new RickyGarrettSquare[6][6];
 		 numberOfBombs = 5;
 		 isPlaying = false;
 		 createBoard();
 	}
 	
 	public void createBoard() {
-		for(int row = 0; row < plots.length; row++){
-			for(int col = 0; col < plots[row].length; col++){
-				plots[row][col] = new RickyGarrettPlot(row, col);
+		for(int row = 0; row < squares.length; row++){
+			for(int col = 0; col < squares[row].length; col++){
+				squares[row][col] = new RickyGarrettSquare(row, col);
 			}
 		}
 		randomizeBombs();
@@ -33,13 +31,17 @@ public class GarrettBackEnd implements RickySupport{
 	public void randomizeBombs() {
 		int count = 0;
 		while(count < numberOfBombs){
-			int minesweeperRow = (int)(Math.random() * plots.length);
-			int minesweeperCol = (int)(Math.random() * plots[minesweeperRow].length);
+			int minesweeperRow = (int)(Math.random() * squares.length);
+			int minesweeperCol = (int)(Math.random() * squares[minesweeperRow].length);
+			if(!squares[minesweeperRow][minesweeperCol].isBomb()) {
+				squares[minesweeperRow][minesweeperCol].setBomb(true);
+				count++;
 			}
-		}		
+		}
+	}
 
-	public RickyGarrettPlot[][] getPlots() {
-		return plots;
+	public RickyGarrettSquare[][] getSquares() {
+		return squares;
 	}
 
 	@Override

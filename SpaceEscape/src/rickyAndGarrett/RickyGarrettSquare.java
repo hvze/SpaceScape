@@ -5,11 +5,15 @@ public class RickyGarrettSquare {
 	private boolean revealed;
 	private int numberOfBombsCloseby;
 	private boolean isBomb;
+	private int row;
+	private int col;
 	
-	public RickyGarrettSquare() {
+	public RickyGarrettSquare(int row, int col) {
 		revealed = false;
 		numberOfBombsCloseby = 0;
 		isBomb = false;
+		this.row = row;
+		this.col = col;
 	}
 	
 	public boolean isRevealed() {
