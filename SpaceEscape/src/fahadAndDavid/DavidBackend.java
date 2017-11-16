@@ -18,8 +18,35 @@ public class DavidBackend implements FahadSupport{
 		}
 	}
 	
+	
 	public void toggleLights(int row, int col) {
-		
+		toggleSlot(row+1, col);
+		toggleSlot(row-1, col);
+		toggleSlot(row, col);
+		toggleIfInBounds(row,col+1);
+		toggleIfInBounds(row,col);
+		toggleIfInBounds(row,col-1);
+	}
+	
+	public void toggleSlot(int row, int col) {
+		if(row >= 0 && row < game.length) {
+			if(col > 0) {
+				game[row][col - 1] = !game[row][col - 1];
+			}
+			if(col < game[row].length - 1) {
+				game[row][col + 1] = !game[row][col + 1];
+			}
+		}
+	}
+	public void toggleIfInBounds(int row, int col) {
+		if(row >= 0 && row < game.length && col >= 0 && col < game[row].length) {
+			game[row][col] = !game[row][col];
+		}
+	}
+
+
+	public boolean isToggleable(int row, int col) {
+		if(row >= 0 )
 	}
 	
 	public DavidBackend(DavidSupport frontend) {
