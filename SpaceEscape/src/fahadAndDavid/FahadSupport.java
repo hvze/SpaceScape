@@ -4,7 +4,7 @@ public interface FahadSupport {
 
 	public void generateMap();
 	
-	public void changeValues();
+	public void toggleLights();
 	
 	public String victorious();
 
