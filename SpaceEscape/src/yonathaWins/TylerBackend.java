@@ -34,43 +34,35 @@ public class TylerBackend implements YonathanSupport {
 	if(occupiedSeg[indexOcc-2].x-occupiedSeg[indexOcc-1].x<0)		{
 		if(occupiedSeg[indexOcc-1].x-occupiedSeg[indexOcc].x<0)
 		return 0;
-		if(occupiedSeg[indexOcc-1].x-occupiedSeg[indexOcc].x>0)
-		return 1;	
-		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].x<0)
+		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].y<0)
 		return 2;
-		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].x>0)
+		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].y>0)
 		return 3;	
 	}
 	
 	else if(occupiedSeg[indexOcc-2].x-occupiedSeg[indexOcc-1].x>0) {
-		if(occupiedSeg[indexOcc-1].x-occupiedSeg[indexOcc].x<0)
-		return 4;
 		if(occupiedSeg[indexOcc-1].x-occupiedSeg[indexOcc].x>0)
 		return 5;	
-		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].x<0)
+		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].y<0)
 		return 6;
-		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].x>0)
+		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].y>0)
 		return 7; 
 	}
 		
-	else if(occupiedSeg[indexOcc-2].y-occupiedSeg[indexOcc-1].y<0)		{\
+	else if(occupiedSeg[indexOcc-2].y-occupiedSeg[indexOcc-1].y<0)		{
 		if(occupiedSeg[indexOcc-1].x-occupiedSeg[indexOcc].x<0)
 		return 8;
 		if(occupiedSeg[indexOcc-1].x-occupiedSeg[indexOcc].x>0)
 		return 9;	
-		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].x<0)
+		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].y<0)
 		return 10;
-		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].x>0)
-		return 11;
 	}
 	else if(occupiedSeg[indexOcc-2].y-occupiedSeg[indexOcc-1].y>0) {
 		if(occupiedSeg[indexOcc-1].x-occupiedSeg[indexOcc].x<0)
 		return 12;
 		if(occupiedSeg[indexOcc-1].x-occupiedSeg[indexOcc].x>0)
 		return 13;	
-		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].x<0)
-		return 14;
-		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].x>0)
+		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].y>0)
 		return 15;
 	}
 	
