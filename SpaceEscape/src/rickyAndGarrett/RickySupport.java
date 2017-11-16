@@ -8,5 +8,7 @@ public interface RickySupport {
 
 	boolean victorious();
 
+	RickyGarrettSquare[][] getSquares();
+
 
 }

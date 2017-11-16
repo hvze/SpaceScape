@@ -10,12 +10,13 @@ public class RickyFrontEnd implements GarrettSupport{
 	}
 
 	public void start() {
-		System.out.println("Press m for the menu.");
+		RickyGarrettSquare[][] squares = backend.getSquares();
+		displayBoard(squares);
 	}
 	
 	public void play() {
 		  while(backend.stillPlaying()){
-		        displayBoard();
+		        displayBoard(backend.getSquares());
 		        String input = backend.getValidUserInput();
 		        respondToInput(input);
 		        autoReveal();
@@ -39,8 +40,26 @@ public class RickyFrontEnd implements GarrettSupport{
 		
 	}
 
-	public void displayBoard() {
-		
+	public void displayBoard(RickyGarrettSquare[][] squares){
+		for(int row = 0; row < squares.length; row++) {
+			System.out.print(row + " ");
+			for(int col = 0; col < squares[row].length;col++) {
+				if(squares[row][col].isRevealed()) {
+					if(squares[row][col].isBomb()) {
+						System.out.print("B");
+					}
+					else {
+						System.out.print(" ");
+						
+					}
+				}
+				else {
+					System.out.print(".");
+				}
+			}
+			System.out.println(" " + row);
+		}
+		//System.out.println();
 	}
 
 	public RickyFrontEnd(){

@@ -2,7 +2,7 @@ package rickyAndGarrett;
 
 public interface GarrettSupport {
 
-	void displayBoard();
+	void displayBoard(RickyGarrettSquare[][] squares);
 
 }
 //
