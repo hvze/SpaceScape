@@ -26,6 +26,7 @@ public class GarrettBackEnd implements RickySupport{
 			}
 		}
 		randomizeBombs();
+		frontend.displayBoard();
 	}
 
 	public void randomizeBombs() {

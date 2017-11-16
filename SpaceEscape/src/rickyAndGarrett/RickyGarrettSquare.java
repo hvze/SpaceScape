@@ -39,4 +39,12 @@ public class RickyGarrettSquare {
 	public void setBomb(boolean isBomb) {
 		this.isBomb = isBomb;
 	}
+	
+	public int getRow() {
+		return row;
+	}
+
+	public int getCol() {
+		return col;
+	}
 }
