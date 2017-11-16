@@ -54,12 +54,12 @@ public class YonathanFrontEnd implements TylerSupport {
 	}
 
 	private void printGameOverMessage() {
-		// TODO Auto-generated method stub
+		System.out.println("conglaturation you win");
 		
 	}
 
 	private void respondToInput(String input) {
-		// TODO Auto-generated method stub
+		
 		
 	}
 }
