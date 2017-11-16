@@ -6,7 +6,7 @@ public interface FahadSupport {
 	
 	public void toggleLights(int row, int col);
 	
-	public String victorious();
+	public boolean victorious();
 
 	public boolean stillPlaying();
 
