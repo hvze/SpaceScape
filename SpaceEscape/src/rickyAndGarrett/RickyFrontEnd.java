@@ -43,8 +43,11 @@ public class RickyFrontEnd implements GarrettSupport{
 		if(squares[row][col].isBomb()) {
 			squares[row][col].setRevealed(true);
 		}
-		else {
-			//check the number of bombs close by
+		else if(squares[row][col].getNumberOfBombsCloseby() != 0){
+				squares[row][col] = squares[row][col].getNumberOfBombsCloseby();
+		}
+		else{
+			autoReveal();
 		}
 	}
 
