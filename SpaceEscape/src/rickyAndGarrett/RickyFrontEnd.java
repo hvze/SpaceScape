@@ -37,8 +37,15 @@ public class RickyFrontEnd implements GarrettSupport{
 	}
 
 	public void respondToInput(String input) {
+		RickyGarrettSquare[][] squares = backend.getSquares();
 		int row = Integer.parseInt(input.substring(0, 1));
 		int col = Integer.parseInt(input.substring(2, 3));
+		if(squares[row][col].isBomb()) {
+			squares[row][col].setRevealed(true);
+		}
+		else {
+			//check the number of bombs close by
+		}
 	}
 
 	public void displayBoard(RickyGarrettSquare[][] squares){
