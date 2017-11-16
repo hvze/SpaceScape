@@ -22,11 +22,13 @@ public class YonathanFrontEnd implements TylerSupport {
 		backend = new TylerBackend(this);
 		flowRoom = new TylerYonathanPlot[3][3];
 		linesComplete = 0;
-		displayFlow();
+		
 	}
 
 	private void displayFlow() {
+		System.out.println("____");
 		for(int row = 0; row < flowRoom.length; row++){
+			System.out.println("|");
 			for(int col = 0; col < flowRoom[row].length; col++){
 				flowRoom[row][col] = new TylerYonathanPlot(col, col);
 				}
@@ -41,14 +43,14 @@ public class YonathanFrontEnd implements TylerSupport {
 	
 
 	private void play() {
-		while(backend.isPlaying()) {
+		//while(backend.isPlaying()) {
 			  displayFlow();
 		        
-		        String input = backend.getValidUserInput();
-		        respondToInput(input);
+		        //String input = backend.getValidUserInput();
+		        //respondToInput(input);
 		       
 		        
-		    }
+		   // }
 		        printGameOverMessage();
 		
 	}
