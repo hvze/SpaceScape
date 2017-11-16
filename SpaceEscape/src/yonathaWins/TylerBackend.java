@@ -33,37 +33,37 @@ public class TylerBackend implements YonathanSupport {
 	public int setOrientation() {
 	if(occupiedSeg[indexOcc-2].x-occupiedSeg[indexOcc-1].x<0)		{
 		if(occupiedSeg[indexOcc-1].x-occupiedSeg[indexOcc].x<0)
-		return 0;
+		return 0;//straight line
 		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].y<0)
-		return 2;
+		return 1;//corner up from left
 		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].y>0)
-		return 3;	
+		return 2;//corner down from left	
 	}
 	
 	else if(occupiedSeg[indexOcc-2].x-occupiedSeg[indexOcc-1].x>0) {
 		if(occupiedSeg[indexOcc-1].x-occupiedSeg[indexOcc].x>0)
-		return 5;	
+		return 0;//straight line	
 		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].y<0)
-		return 6;
+		return 3;//corner up from right
 		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].y>0)
-		return 7; 
+		return 4;//corner down from right
 	}
 		
 	else if(occupiedSeg[indexOcc-2].y-occupiedSeg[indexOcc-1].y<0)		{
 		if(occupiedSeg[indexOcc-1].x-occupiedSeg[indexOcc].x<0)
-		return 8;
+		return 4;//corner down from right
 		if(occupiedSeg[indexOcc-1].x-occupiedSeg[indexOcc].x>0)
-		return 9;	
+		return 2;//corner down from left	
 		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].y<0)
-		return 10;
+		return 5;//vertical line
 	}
 	else if(occupiedSeg[indexOcc-2].y-occupiedSeg[indexOcc-1].y>0) {
 		if(occupiedSeg[indexOcc-1].x-occupiedSeg[indexOcc].x<0)
-		return 12;
+		return 3;//corner up from right
 		if(occupiedSeg[indexOcc-1].x-occupiedSeg[indexOcc].x>0)
-		return 13;	
+		return 1;//corner up from left	
 		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].y>0)
-		return 15;
+		return 5;//vertical line
 	}
 	
 		}
