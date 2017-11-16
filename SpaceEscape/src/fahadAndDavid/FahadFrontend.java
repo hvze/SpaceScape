@@ -19,8 +19,7 @@ public class FahadFrontend implements DavidSupport{
 	        displayScore();
 	        String input = backend.getValidUserInput();
 	        respondToInput(input);
-
-	        backend.changeValues();
+	        backend.toggleLights();
 	        
 	        updateBoard();
 	    }
@@ -33,8 +32,9 @@ public class FahadFrontend implements DavidSupport{
 	}
 
 	public void respondToInput(String input) {
-		// TODO Auto-generated method stub
-		
+		if(backend.validInput()) {
+			
+		}
 	}
 
 	public void printGameOverMessage(String victorious) {
