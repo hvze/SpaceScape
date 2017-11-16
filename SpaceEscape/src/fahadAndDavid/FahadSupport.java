@@ -13,4 +13,6 @@ public interface FahadSupport {
 	public String getValidUserInput();
 	
 	public boolean validInput();
+
+	public boolean[][] getGameBoard();
 }
