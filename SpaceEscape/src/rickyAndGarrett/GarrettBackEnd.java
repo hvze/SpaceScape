@@ -76,8 +76,52 @@ public class GarrettBackEnd implements RickySupport{
 		int col = square.getCol();
 		int count = 0;
 		if(!square.isBomb()) {
-			
+			count += countBombsInThisLine(squares, row, col);
+			if(row > 0) {
+				count += countBombsInALine(squares, row - 1, col);
+			}
+			if(row < squares.length - 1) {
+				count += countBombsInALine(squares, row + 1, col);
+			}
 		}
+		square.setNumberOfBombsCloseby(count);
+	}
+
+	public int countBombsInThisLine(RickyGarrettSquare[][] squares, int row, int col) {
+		int count = 0;
+		if(row >= 0 && row < squares.length) {
+			if(col > 0) {
+				if(squares[row][col - 1].isBomb()) {
+					count++;
+				}
+			}
+			if(col < squares[row].length - 1) {
+				if(squares[row][col + 1].isBomb()) {
+					count++;
+				}
+			}
+		}
+		return count;
+	}
+
+	public int countBombsInALine(RickyGarrettSquare[][] squares, int row, int col) {
+		int count = 0;
+		if(row >= 0 && row < squares.length) {
+			if(squares[row][col].isBomb()) {
+				count++;
+			}
+			if(col > 0) {
+				if(squares[row][col - 1].isBomb()) {
+					count++;
+				}
+			}
+			if(col < squares[row].length - 1) {
+				if(squares[row][col + 1].isBomb()) {
+					count++;
+				}
+			}
+		}
+		return count;
 	}
 
 	@Override
