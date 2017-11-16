@@ -16,10 +16,10 @@ public class YonathanFrontEnd implements TylerSupport {
 	public String orientation[]= {"___\n|"+identifier+" \n|  ","___\n "+identifier
 			};
 	private TylerYonathanPlot[][] flowRoom;
-	private YonathanSupport frontend;
+	private YonathanSupport backend;
 	private int linesComplete;
 	public YonathanFrontEnd() {
-		frontend = new TylerBackend(this);
+		backend = new TylerBackend(this);
 		flowRoom = new TylerYonathanPlot[3][3];
 		linesComplete = 0;
 		displayFlow();
@@ -41,11 +41,25 @@ public class YonathanFrontEnd implements TylerSupport {
 	
 
 	private void play() {
-		while(TylerBackend.isPlaying) {
-				
-			
+		while(backend.isPlaying()) {
+			  displayFlow();
+		        
+		        String input = backend.getValidUserInput();
+		        respondToInput(input);
+		       
+		        
+		    }
+		        printGameOverMessage();
 		
-		}
+	}
+
+	private void printGameOverMessage() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	private void respondToInput(String input) {
+		// TODO Auto-generated method stub
 		
 	}
 }

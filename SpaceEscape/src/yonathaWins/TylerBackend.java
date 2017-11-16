@@ -4,7 +4,7 @@ public class TylerBackend implements YonathanSupport {
 
 	//go to yonathan backend, make 2d array, define proportions
 	//
-	public static boolean isPlaying;
+	public boolean isPlaying;
 	private TylerSupport frontend;
 	private int lines;
 	private int turns;
@@ -81,6 +81,18 @@ public class TylerBackend implements YonathanSupport {
 					
 				return false;
 	
+	}
+
+	@Override
+	public String getValidUserInput() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public boolean isPlaying() {
+		// TODO Auto-generated method stub
+		return false;
 	}
 
 }
