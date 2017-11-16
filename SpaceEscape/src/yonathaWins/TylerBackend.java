@@ -12,7 +12,7 @@ public class TylerBackend implements YonathanSupport {
 	private int y;
 	private int indexOcc = 0;
 	private Object[] occupiedSeg;
-	private String oreintation = "0123";
+	private String orientation = "0123";
 	String validKeys = "wasde";
 	
 	

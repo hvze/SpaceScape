@@ -1,6 +1,6 @@
 package yonathaWins;
 
-import caveExplorer.CaveRoom;
+
 
 public class YonathanFrontEnd implements TylerSupport {
 	//make 2d array populate with tylerfiller
@@ -15,12 +15,12 @@ public class YonathanFrontEnd implements TylerSupport {
 	//ask about turning off the minigame
 	public String orientation[]= {"___\n|"+identifier+" \n|  ","___\n "+identifier
 			};
-	private CaveRoom[][] flowRoom;
+	private TylerYonathanPlot[][] flowRoom;
 	private YonathanSupport frontend;
 	private int linesComplete;
 	public YonathanFrontEnd() {
 		frontend = new TylerBackend(this);
-		flowRoom = new CaveRoom[3][3];
+		flowRoom = new TylerYonathanPlot[3][3];
 		linesComplete = 0;
 		displayFlow();
 	}
@@ -28,8 +28,9 @@ public class YonathanFrontEnd implements TylerSupport {
 	private void displayFlow() {
 		for(int row = 0; row < flowRoom.length; row++){
 			for(int col = 0; col < flowRoom[row].length; col++){
-				flowRoom[row][col] = new CaveRoom(row,col);
-		
+				flowRoom[row][col] = new TylerYonathanPlot();
+				}
+		}
 	}
 
 	public static void main(String[] args) {
