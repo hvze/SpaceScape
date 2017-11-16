@@ -28,7 +28,7 @@ public class YonathanFrontEnd implements TylerSupport {
 	private void displayFlow() {
 		for(int row = 0; row < flowRoom.length; row++){
 			for(int col = 0; col < flowRoom[row].length; col++){
-				flowRoom[row][col] = new TylerYonathanPlot();
+				flowRoom[row][col] = new TylerYonathanPlot(col, col);
 				}
 		}
 	}
