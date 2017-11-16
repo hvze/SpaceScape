@@ -6,5 +6,7 @@ public interface YonathanSupport {
 
 	boolean isPlaying();
 
+	int getValidUserInput(String imp);
+
 
 }

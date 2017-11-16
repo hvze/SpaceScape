@@ -72,8 +72,8 @@ public class TylerBackend implements YonathanSupport {
 	
 	public boolean isValid(int  x ,int  y) {
 //yonathan setting x and y is on your end
-				if(Flow[x][y].occupied == false ) {
-					occupiedSeg[indexOcc] = Flow[x][y];
+				if(TylerYonathanPlot[x][y].occupied == false ) {
+					occupiedSeg[indexOcc] = TylerYonathanPlot[x][y];
 					indexOcc++;
 					setOrientation();
 					return true;
@@ -84,15 +84,18 @@ public class TylerBackend implements YonathanSupport {
 	}
 
 	@Override
-	public String getValidUserInput() {
+	public int getValidUserInput(String imp ) {
 		// TODO Auto-generated method stub
-		return null;
+		if(validKeys.indexOf(imp)!= -1) {
+		isValid(x, y);
+		return validKeys.indexOf(imp);}
+		
+		return -1;
 	}
 
 	@Override
 	public boolean isPlaying() {
-		// TODO Auto-generated method stub
-		return false;
+	
 	}
 
 }
