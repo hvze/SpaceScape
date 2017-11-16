@@ -10,7 +10,7 @@ public class YonathanFrontEnd implements TylerSupport {
 	private String identifier;
 	// ask knockles about keyboard and mouse imputs from a computer
 	//match order to tylers indexs in setorientation 
-	//convince ricky to do final room
+	//convince ricky to do final room 
 	// ask about displaying array possible problems from using caveroom to make the array
 	//ask about turning off the minigame
 	public String orientation[]= {"___\n|"+identifier+" \n|  ","___\n "+identifier

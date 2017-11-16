@@ -33,7 +33,7 @@ public class TylerBackend implements YonathanSupport {
 	public int setOrientation() {
 	if(occupiedSeg[indexOcc-2].x-occupiedSeg[indexOcc-1].x<0)		{
 		if(occupiedSeg[indexOcc-1].x-occupiedSeg[indexOcc].x<0)
-		return 0;//straight line
+		return 0;//straight line 
 		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].y<0)
 		return 1;//corner up from left
 		if(occupiedSeg[indexOcc-1].y-occupiedSeg[indexOcc].y>0)
