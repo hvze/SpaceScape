@@ -8,8 +8,11 @@ public class YonathanFrontEnd implements TylerSupport {
 	//before a square is populated, check if it's already populated
 	//randomly check when a thing is populate whether or not it's a starter and if it's a starter than make an end goal randomly around the map
 	private String identifier;
-	
+	// ask knockles about keyboard and mouse imputs from a computer
 	//match order to tylers indexs in setorientation 
+	//convince ricky to do final room
+	// ask about displaying array possible problems from using caveroom to make the array
+	//ask about turning off the minigame
 	public String orientation[]= {"___\n|"+identifier+" \n|  ","___\n "+identifier
 			};
 	public static CaveRoom[][] flowRoom;
