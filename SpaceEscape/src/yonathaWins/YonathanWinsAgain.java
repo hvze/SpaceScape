@@ -3,12 +3,14 @@ package yonathaWins;
 import caveExplorer.CaveRoom;
 
 public class YonathanWinsAgain extends CaveRoom {
-
+ String roomdescription = "you enter the room on the bed is jumpsuit with biohazard signs drawn on it the computer was left you see alot of files labeled notes";
+ String notesone ="";
+ String notestwo ="";
 	public YonathanWinsAgain(String description) {
 		super(description);
 		
 	}
-     // loli l ove 
+// the minigame should unlock the door with the function in cave room also check knockles code
 	public void preformAction() {
 	
 	}
@@ -16,9 +18,11 @@ public class YonathanWinsAgain extends CaveRoom {
 		System.out.println("That key does nothing.");
 	}
 	public void printAllowedEntry() {
-		System.out.println("You can only enter 'w', 'a', 's', or 'd'.");
+		System.out.println("When you enter the room you see and information kiosk");
 	}
 	public String validKeys() {
-		return "wdsa";
+		return "wdsae";
 	}
+	 
 }
+ 

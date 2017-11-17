@@ -1,5 +1,8 @@
 package caveExplorer;
 
+import yonathaWins.TylerCave;
+import yonathaWins.YonathanWinsAgain;
+
 public class CaveRoom {
 	
 	private String description;//tells what the room looks like
@@ -20,7 +23,7 @@ public class CaveRoom {
 		this.description = description;
 		setDefaultContents(" ");
 		contents = defaultContents;
-		//difference between defaultContents and contents is "contents" becomes an 'X' when you are
+		//difference bet ween defaultContents and contents is "contents" becomes an 'X' when you are
 		//inside this room, when you leave, it goes back to defaultContents
 		
 		//note: by default, arrays will populate with 'null' meaning there are no connections
@@ -45,7 +48,7 @@ public class CaveRoom {
 		for(int i = 0; i < doors.length; i++) {
 			if(doors[i] != null) {
 				doorFound = true;
-				directions += "\n   There is a " + doors[i].getDescription() + " to " + 
+				directions += "\n   There is a  " + doors[i].getDescription() + " to " + 
 				toDirection(i) + ". " + doors[i].getDetails();
 			}
 		}
@@ -165,7 +168,7 @@ public class CaveRoom {
 	public static void setUpCaves() {
 		//ALL OF THIS CODE CAN BE CHANGED
 		//1. Decide how big your caves should be
-		CaveExplorer.caves = new NPCRoom[5][5];
+		CaveExplorer.caves = new CaveRoom[5][5];
 		//2. Populate with caves and a default description: hint: when starting, use coordinates (helps debugging)	
 		for(int row = 0; row < CaveExplorer.caves.length; row++) {
 			//PLEASE PAY ATTENTION TO THE DIFFERENCE:
@@ -180,17 +183,27 @@ public class CaveRoom {
 		CaveExplorer.npcs = new NPC[1];
 		CaveExplorer.npcs[0] = new NPC();
 		CaveExplorer.npcs[0].setPosition(1, 1);
+		//ad each person room like this
+		CaveRoom customRoom = new TylerCave("Room");
+		CaveExplorer.caves[1][0] = customRoom;
+		CaveRoom yoanthanRoom = new YonathanWinsAgain("Room");
+		CaveExplorer.caves[0][0] = yoanthanRoom;
 		
 		//4. Set your starting room:
 		CaveExplorer.currentRoom = CaveExplorer.caves[0][1];
 		CaveExplorer.currentRoom.enter();
 		//5. Set up doors
 		CaveRoom[][] c = CaveExplorer.caves;
+		Door locked = new Door();
+		locked.setOpen(false);
+		locked.setLocked(true);
 		c[0][1].setConnection(SOUTH, c[1][1], new Door());
+		c[0][0].setConnection(SOUTH, c[1][0], locked);
+		c[0][1].setConnection(WEST, c[0][0], new Door());
 		
 	}
 
-
+ 
 	public String getDescription() {
 		return description + "\n" + directions;
 	}
