@@ -2,14 +2,13 @@ package fahadAndDavid;
 
 public class FahadFrontend implements DavidSupport{
 
-	private static FahadSupport backend;
+	private FahadSupport backend;
 	private int row;
 	private int col;
 	private String[][] visuals = new String[5][5];
 
 	public static void main(String[] args) {
 		FahadFrontend demo = new FahadFrontend();
-		backend.generateGame();
 		demo.play();
 	}
 
@@ -18,6 +17,7 @@ public class FahadFrontend implements DavidSupport{
 	}
 
 	public void play(){
+		backend.generateGame();
 		while(backend.isVictorious()){
 			displayBoard();
 			String input = backend.getValidUserInput();
