@@ -6,9 +6,8 @@ public class DavidBackend implements FahadSupport{
 	
 	public boolean[][] game;
 	public static Scanner in;
-	public boolean victorious = false;
 	
-	public void generateMap() {
+	public void generateGame() {
 		game = new boolean[5][5];
 		for(int row = 0; row < game.length; row++) {
 			for(int col = 0; col < game[row].length; col++) {
@@ -43,19 +42,39 @@ public class DavidBackend implements FahadSupport{
 			game[row][col] = !game[row][col];
 		}
 	}
-
-
-	public boolean isToggleable(int row, int col) {
-		if(row >= 0 )
-	}
 	
 	public DavidBackend(DavidSupport frontend) {
 		
 	}
-	
-	
-	public void main(String[] args) {
-		generateMap();
+
+	public boolean isVictorious() {
+		for(int row = 0; row < game.length; row++) {
+			for(int col = 0; col < game[row].length; col++) {
+				if(game[row][col] == false)
+					return false;
+					
+			}
+		}
+		return true;
+	}
+
+	public boolean stillPlaying() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public String getValidUserInput() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public boolean validInput() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
+	public boolean[][] getGameBoard() {
+		return game;
 	}
 
 }
