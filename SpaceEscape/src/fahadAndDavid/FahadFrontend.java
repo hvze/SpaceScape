@@ -34,14 +34,9 @@ public class FahadFrontend implements DavidSupport{
 	}
 
 	public void respondToInput(String input) {
-		if(input.length() == 3) {
-			row = Integer.parseInt(input.substring(0,1));
-			col = Integer.parseInt(input.substring(2));
-			setLights(row,col);
-		}
-		else {
-			System.out.println("Please use this format for your input; x,y");
-		}
+		row = Integer.parseInt(input.substring(0,1));
+		col = Integer.parseInt(input.substring(2));
+		setLights(row,col);
 	}
 
 	public void printGameOverMessage() {
