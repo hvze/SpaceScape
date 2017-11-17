@@ -2,7 +2,7 @@ package fahadAndDavid;
 
 public class FahadFrontend implements DavidSupport{
 
-	private FahadSupport backend;
+	private static FahadSupport backend;
 	private int row;
 	private int col;
 	private String[][] visuals = new String[5][5];
@@ -39,8 +39,7 @@ public class FahadFrontend implements DavidSupport{
 	}
 
 	public void printGameOverMessage() {
-		// TODO Auto-generated method stub
-
+		System.out.println("GG. You've done well");
 	}
 
 	public void displayBoard() {
