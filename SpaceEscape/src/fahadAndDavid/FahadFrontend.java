@@ -1,7 +1,5 @@
 package fahadAndDavid;
 
-import java.util.Scanner;
-
 public class FahadFrontend implements DavidSupport{
 
 	private FahadSupport backend;
