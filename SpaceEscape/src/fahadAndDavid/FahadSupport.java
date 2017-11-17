@@ -2,7 +2,7 @@ package fahadAndDavid;
 
 public interface FahadSupport {
 
-	public void generateMap();
+	public void generateGame();
 	
 	public void toggleLights(int row, int col);
 	

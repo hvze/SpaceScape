@@ -9,6 +9,7 @@ public class FahadFrontend implements DavidSupport{
 
 	public static void main(String[] args) {
 		FahadFrontend demo = new FahadFrontend();
+		backend.generateGame();
 		demo.play();
 	}
 
