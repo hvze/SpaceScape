@@ -1,11 +1,14 @@
 package fahadAndDavid;
 
+import java.util.Scanner;
+
 public class FahadFrontend implements DavidSupport{
 
 	private FahadSupport backend;
 	private int row;
 	private int col;
 	private String[][] visuals = new String[5][5];
+	public static Scanner in;
 
 	public static void main(String[] args) {
 		FahadFrontend demo = new FahadFrontend();
@@ -18,10 +21,11 @@ public class FahadFrontend implements DavidSupport{
 
 	public void play(){
 		backend.generateGame();
-		while(backend.isVictorious()){
+		while(!backend.isVictorious()){
 			displayBoard();
-			String input = backend.getValidUserInput();
-			respondToInput(input);
+			String input = in.nextLine();
+			String userInput = backend.getValidUserInput(input);
+			respondToInput(userInput);
 			backend.toggleLights(row, col);
 
 			updateBoard();
@@ -35,7 +39,7 @@ public class FahadFrontend implements DavidSupport{
 
 	public void respondToInput(String input) {
 		row = Integer.parseInt(input.substring(0,1));
-		col = Integer.parseInt(input.substring(2,3));
+		col = Integer.parseInt(input.substring(2));
 	}
 
 	public void printGameOverMessage() {

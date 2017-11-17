@@ -8,9 +8,9 @@ public interface FahadSupport {
 	
 	public boolean isVictorious();
 
-	public String getValidUserInput();
+	public String getValidUserInput(String input);
 	
-	public boolean validInput();
+	public boolean validInput(String input);
 
 	public boolean[][] getGameBoard();
 }
