@@ -1,8 +1,11 @@
 package rickyAndGarrett;
 
+import java.util.Scanner;
+
 public class RickyFrontEnd implements GarrettSupport{
 	
 	private RickySupport backend;
+	public static Scanner in;
 	
 	public static final void main(String[] args) {
 		RickyFrontEnd demo = new RickyFrontEnd();
@@ -44,9 +47,9 @@ public class RickyFrontEnd implements GarrettSupport{
 		if(!squares[row][col].isRevealed()){
 			if(squares[row][col].isBomb()) {
 				squares[row][col].setRevealed(true);
+				backend.setPlaying(false);
 			}
 			else if(squares[row][col].getNumberOfBombsCloseby() != 0){
-				squares[row][col] = squares[row][col].getNumberOfBombsCloseby();
 				squares[row][col].setRevealed(true);
 			}
 			else{
@@ -66,10 +69,11 @@ public class RickyFrontEnd implements GarrettSupport{
 				if(squares[row][col].isRevealed()) {
 					if(squares[row][col].isBomb()) {
 						System.out.print("B");
+					}else if(squares[row][col].getNumberOfBombsCloseby() != 0) {
+						System.out.print(squares[row][col].getNumberOfBombsCloseby());
 					}
 					else {
 						System.out.print(" ");
-						
 					}
 				}
 				else {
@@ -83,5 +87,6 @@ public class RickyFrontEnd implements GarrettSupport{
 
 	public RickyFrontEnd(){
 		 backend = new GarrettBackEnd(this);
+		 in = new Scanner(System.in);
 	}
 }

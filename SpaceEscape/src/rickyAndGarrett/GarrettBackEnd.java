@@ -1,7 +1,5 @@
 package rickyAndGarrett;
 
-import java.util.Scanner;
-
 public class GarrettBackEnd implements RickySupport{
 	
 	private GarrettSupport frontend;
@@ -9,7 +7,6 @@ public class GarrettBackEnd implements RickySupport{
 
 	private static int numberOfBombs;
 	private boolean isPlaying;
-	public static Scanner in;
 	
 	public GarrettBackEnd(GarrettSupport frontend){
 		 this.frontend = frontend;
@@ -55,7 +52,7 @@ public class GarrettBackEnd implements RickySupport{
 
 	@Override
 	public String getValidUserInput() {
-		String input = in.nextLine();
+		String input = RickyFrontEnd.in.nextLine();
 		String a = input.substring(0, 1);
 		String b = input.substring(1, 2);
 		String c = input.substring(2, 3);
