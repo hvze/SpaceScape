@@ -26,7 +26,7 @@ public class FahadFrontend implements DavidSupport{
 
 			updateBoard();
 		}
-		printGameOverMessage(backend.victorious());
+		printGameOverMessage(backend.isVictorious());
 	}
 
 	public void updateBoard() {
@@ -50,8 +50,17 @@ public class FahadFrontend implements DavidSupport{
 	}
 
 	public void displayBoard() {
-		// TODO Auto-generated method stub
-
+		boolean[][] gameBoard = backend.getGameBoard();
+		for(int row = 0; row < gameBoard.length;row++) {
+			for(int col = 0; col < gameBoard[row].length;col++) {
+				if(gameBoard[row][col] == false) {
+					visuals[row][col] = "*";
+				}
+				if(gameBoard[row][col] == true) {
+					visuals[row][col] = "[]";
+				}
+			}
+		}
 	}
 
 	@Override
@@ -64,7 +73,7 @@ public class FahadFrontend implements DavidSupport{
 		if(row+1 < gameBoard.length) {
 			toggleContent(row+1,col);
 		}
-		if(col >= 0) {
+		if(col > 0) {
 			toggleContent(row,col-1);
 		}
 		if(col+1 < gameBoard[row].length) {
@@ -73,13 +82,6 @@ public class FahadFrontend implements DavidSupport{
 	}
 
 	public void toggleContent(int row, int col) {
-		boolean[][] gameBoard = backend.getGameBoard();
-		if(gameBoard[row][col] == false) {
-			visuals[row][col] = "*";
-		}
-		if(gameBoard[row][col] == true) {
-			visuals[row][col] = "[]";
-		}
 		backend.toggleLights(row, col);
 	}
 }
