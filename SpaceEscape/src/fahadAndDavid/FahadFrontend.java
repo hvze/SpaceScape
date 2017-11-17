@@ -17,34 +17,27 @@ public class FahadFrontend implements DavidSupport{
 	}
 
 	public void play(){
-		while(backend.stillPlaying()){
+		while(backend.isVictorious()){
 			displayBoard();
-			displayScore();
 			String input = backend.getValidUserInput();
 			respondToInput(input);
 			backend.toggleLights(row, col);
 
 			updateBoard();
 		}
-		printGameOverMessage(backend.isVictorious());
+		printGameOverMessage();
 	}
 
 	public void updateBoard() {
-		// TODO Auto-generated method stub
-
+		displayBoard();
 	}
 
 	public void respondToInput(String input) {
 		row = Integer.parseInt(input.substring(0,1));
-		col = Integer.parseInt(input.substring(2));
+		col = Integer.parseInt(input.substring(2,3));
 	}
 
-	public void printGameOverMessage(boolean b) {
-		// TODO Auto-generated method stub
-
-	}
-
-	public void displayScore() {
+	public void printGameOverMessage() {
 		// TODO Auto-generated method stub
 
 	}

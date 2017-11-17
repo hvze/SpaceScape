@@ -8,8 +8,6 @@ public interface FahadSupport {
 	
 	public boolean isVictorious();
 
-	public boolean stillPlaying();
-
 	public String getValidUserInput();
 	
 	public boolean validInput();
