@@ -10,5 +10,7 @@ public interface RickySupport {
 
 	RickyGarrettSquare[][] getSquares();
 
+	void setPlaying(boolean b);
+
 
 }

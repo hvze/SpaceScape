@@ -15,6 +15,7 @@ public class RickyFrontEnd implements GarrettSupport{
 	}
 	
 	public void play() {
+		backend.setPlaying(true);
 		  while(backend.stillPlaying()){
 		        displayBoard(backend.getSquares());
 		        String input = backend.getValidUserInput();
@@ -40,17 +41,23 @@ public class RickyFrontEnd implements GarrettSupport{
 		RickyGarrettSquare[][] squares = backend.getSquares();
 		int row = Integer.parseInt(input.substring(0, 1));
 		int col = Integer.parseInt(input.substring(2, 3));
-		if(squares[row][col].isBomb()) {
-			squares[row][col].setRevealed(true);
-		}
-		else if(squares[row][col].getNumberOfBombsCloseby() != 0){
+		if(!squares[row][col].isRevealed()){
+			if(squares[row][col].isBomb()) {
+				squares[row][col].setRevealed(true);
+			}
+			else if(squares[row][col].getNumberOfBombsCloseby() != 0){
 				squares[row][col] = squares[row][col].getNumberOfBombsCloseby();
+				squares[row][col].setRevealed(true);
+			}
+			else{
+				autoReveal();
+			}
 		}
 		else{
-			autoReveal();
+			System.out.println("You already typed in this coordinate.");
 		}
 	}
-
+	
 	public void displayBoard(RickyGarrettSquare[][] squares){
 		String columns = "  0123456789";
 		for(int row = 0; row < squares.length; row++) {
