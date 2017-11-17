@@ -58,19 +58,16 @@ public class DavidBackend implements FahadSupport{
 		return true;
 	}
 
-	public boolean stillPlaying() {
-		// TODO Auto-generated method stub
-		return false;
+	public String getValidUserInput(String input) {
+		while(!validInput(input)) {
+			
+		}
 	}
 
-	public String getValidUserInput() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	public boolean validInput() {
-		// TODO Auto-generated method stub
-		return false;
+	public boolean validInput(String input) {
+		if(input.length() == 3 && ) {
+			
+		}
 	}
 
 	public boolean[][] getGameBoard() {
