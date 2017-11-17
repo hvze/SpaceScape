@@ -8,7 +8,6 @@ public class FahadFrontend implements DavidSupport{
 	private int row;
 	private int col;
 	private String[][] visuals = new String[5][5];
-	public static Scanner in;
 
 	public static void main(String[] args) {
 		FahadFrontend demo = new FahadFrontend();
@@ -23,10 +22,9 @@ public class FahadFrontend implements DavidSupport{
 		backend.generateGame();
 		while(!backend.isVictorious()){
 			displayBoard();
-			String input = in.nextLine();
+			String input = DavidBackend.in.nextLine();
 			String userInput = backend.getValidUserInput(input);
 			respondToInput(userInput);
-			backend.toggleLights(row, col);
 
 			updateBoard();
 		}
@@ -38,8 +36,14 @@ public class FahadFrontend implements DavidSupport{
 	}
 
 	public void respondToInput(String input) {
-		row = Integer.parseInt(input.substring(0,1));
-		col = Integer.parseInt(input.substring(2));
+		if(input.length() == 3) {
+			row = Integer.parseInt(input.substring(0,1));
+			col = Integer.parseInt(input.substring(2));
+			setLights(row,col);
+		}
+		else {
+			System.out.println("Please use this format for your input; x,y");
+		}
 	}
 
 	public void printGameOverMessage() {
@@ -60,25 +64,7 @@ public class FahadFrontend implements DavidSupport{
 		}
 	}
 
-	@Override
 	public void setLights(int row, int col) {
-		boolean[][] gameBoard = backend.getGameBoard();
-		toggleContent(row,col);
-		if(row > 0) {
-			toggleContent(row-1,col);
-		}
-		if(row+1 < gameBoard.length) {
-			toggleContent(row+1,col);
-		}
-		if(col > 0) {
-			toggleContent(row,col-1);
-		}
-		if(col+1 < gameBoard[row].length) {
-			toggleContent(row,col+1);
-		}
-	}
-
-	public void toggleContent(int row, int col) {
 		backend.toggleLights(row, col);
 	}
 }
